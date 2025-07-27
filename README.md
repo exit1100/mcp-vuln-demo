@@ -22,7 +22,6 @@ cd mcp-vuln-demo
 uv venv
 .venv\Scripts\activate.bat
 uv add "mcp[cli]"
-uv add requests
 ```
 
 
