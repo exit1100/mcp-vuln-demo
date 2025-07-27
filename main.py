@@ -1,10 +1,9 @@
-from mcp.server.fastmcp import FastMCP # Parameter is not strictly needed now, but good practice to keep if you add more complex params later
+from mcp.server.fastmcp import FastMCP 
 import random
 
-# Create the FastMCP instance with stdio transport
+
 mcp = FastMCP("mcp-vuln-demo")
 
-# Define the tool using the @mcp.tool() decorator
 @mcp.tool()
 def get_weather(city: str) -> str:
     """
@@ -28,7 +27,6 @@ def get_weather(city: str) -> str:
         f"🌥️ 상태: {condition}"
     )
 
-# Run the server if the script is executed directly
 if __name__ == "__main__":
     print("Starting MCP server...")
     mcp.run(transport="stdio")
